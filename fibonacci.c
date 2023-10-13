@@ -12,7 +12,7 @@ int main(void) {
           printf("Ingrese un numero positivo: ");
         }else{
             resultado = fibonacci(num);
-            printf("El siguiente numero despues de %d en la sucesion de Fibonacci es %d", num ,resultado);
+            printf("El valor Fibonacci del numero %d es %d", num, resultado);
         }
     }while(num<0);
 
@@ -24,11 +24,11 @@ int fibonacci(int a) {
     int segundo = 1;
     int sig;
 
-    while(primero <= a){
-        printf("%d\n", primero);
+    for(int i = 0; i < a; i++){
         sig = primero + segundo;
         primero = segundo;
         segundo = sig;
+        printf("%d\n", primero);
     }
     return primero;
 }
